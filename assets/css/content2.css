@@ -1,0 +1,170 @@
+.content-2-container {
+    width: 100%;
+    height: 105vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-2 {
+    width: 683px;
+    height: 683px;
+
+    display: grid;
+    grid-gap: 2px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.content-2 > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 0.4px solid rgba(255, 255, 255, 0.3);
+}
+
+.content-2-1 {
+    grid-row: 2 / 3;
+    grid-column: 3 / 6;
+}
+
+.content-2-2 {
+    grid-row: 3 / 6;
+    grid-column: 4 / 5;
+}
+
+.content-2-2 > p {
+    transform: rotate(90deg);
+}
+
+.content-2-button {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    cursor: pointer;
+}
+
+.content-2-3 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+}
+
+.content-2-3 > p {
+    transform: rotate(180deg);
+}
+
+.content-2-4 {
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+}
+
+.content-2-4 > p {
+    transform: rotate(270deg);
+}
+
+.rotate_one {
+    animation: rotate_one 1s forwards;
+}
+
+.rotate_two {
+    animation: rotate_two 1s forwards;
+}
+
+.rotate_three {
+    animation: rotate_three 1s forwards;
+}
+
+.rotate_zero {
+    animation: rotate_zero 1s forwards;
+}
+
+.rotate_one .content-2-button h1 {
+    animation: unrotate_one 1s forwards;
+}
+
+.rotate_two .content-2-button h1 {
+    animation: unrotate_two 1s forwards;
+}
+
+.rotate_three .content-2-button h1 {
+    animation: unrotate_three 1s forwards;
+}
+
+.rotate_zero .content-2-button h1 {
+    animation: unrotate_zero 1s forwards;
+}
+
+@keyframes rotate_one {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes rotate_two {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes rotate_three {
+    0% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-270deg);
+    }
+}
+
+@keyframes rotate_zero {
+    0% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes unrotate_one {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes unrotate_two {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes unrotate_three {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes unrotate_zero {
+    0% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
